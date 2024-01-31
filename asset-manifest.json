@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.7dbd2c76.css",
-    "main.js": "/static/js/main.a01d3876.js",
-    "static/js/787.c74f3284.chunk.js": "/static/js/787.c74f3284.chunk.js",
-    "static/media/maja.png": "/static/media/maja.5425f88cffde94109c82.png",
-    "static/media/raven.jpg": "/static/media/raven.84765fab4a6affae21a9.jpg",
-    "static/media/paints.jpg": "/static/media/paints.ba46eed159c3e439ee67.jpg",
-    "static/media/winnicka.png": "/static/media/winnicka.ceb764857baf524181c7.png",
-    "static/media/forest.png": "/static/media/forest.ffc4d87d416a1745b8b9.png",
-    "index.html": "/index.html",
-    "main.7dbd2c76.css.map": "/static/css/main.7dbd2c76.css.map",
-    "main.a01d3876.js.map": "/static/js/main.a01d3876.js.map",
-    "787.c74f3284.chunk.js.map": "/static/js/787.c74f3284.chunk.js.map"
+    "main.css": "/MajaWinnickaWeb/static/css/main.3e87a870.css",
+    "main.js": "/MajaWinnickaWeb/static/js/main.553ee18c.js",
+    "static/js/787.c74f3284.chunk.js": "/MajaWinnickaWeb/static/js/787.c74f3284.chunk.js",
+    "static/media/maja.png": "/MajaWinnickaWeb/static/media/maja.5425f88cffde94109c82.png",
+    "static/media/raven.jpg": "/MajaWinnickaWeb/static/media/raven.84765fab4a6affae21a9.jpg",
+    "static/media/paints.jpg": "/MajaWinnickaWeb/static/media/paints.ba46eed159c3e439ee67.jpg",
+    "static/media/winnicka.png": "/MajaWinnickaWeb/static/media/winnicka.ceb764857baf524181c7.png",
+    "static/media/forest.png": "/MajaWinnickaWeb/static/media/forest.ffc4d87d416a1745b8b9.png",
+    "index.html": "/MajaWinnickaWeb/index.html",
+    "main.3e87a870.css.map": "/MajaWinnickaWeb/static/css/main.3e87a870.css.map",
+    "main.553ee18c.js.map": "/MajaWinnickaWeb/static/js/main.553ee18c.js.map",
+    "787.c74f3284.chunk.js.map": "/MajaWinnickaWeb/static/js/787.c74f3284.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7dbd2c76.css",
-    "static/js/main.a01d3876.js"
+    "static/css/main.3e87a870.css",
+    "static/js/main.553ee18c.js"
   ]
 }
