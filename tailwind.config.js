@@ -5,24 +5,26 @@ module.exports = {
   content: [],
   theme: {
     extend: {
-      backgroundImage: {
-        one: "url('/images/1.png')",
-        two: "url('/images/2.png')",
-        three: "url('/images/3.png')",
-        four: "url('/images/4.png')",
-        five: "url('/images/5.png')",
-        six: "url('/images/6.png')",
-      },
       colors: {
-        // Light theme colors
-        "light-primary": "#...",
-        "light-secondary": "#...",
-        // Dark theme colors
-        "dark-primary": "#...",
-        "dark-secondary": "#...",
+        sage: {
+          100: "#E6EAE5",
+          200: "#CDD6CB",
+          300: "#B4C2B1",
+          400: "#9CAE97",
+          500: "#687464",
+          600: "#343A32",
+        },
+        walnut: "#6D5B37",
+        gold: "#AB8F59",
+      },
+      fontFamily: {
+        fira: ["Fira Sans", "sans-serif"], // Corrected here
       },
       boxShadow: {
         glow: "0 0 15px 5px rgba(66, 153, 225, 0.5)", // Custom glow effect
+      },
+      backgroundImage: {
+        "forest-bg": "url('./images/forest.png')", // Add this line
       },
     },
   },
