@@ -3,6 +3,7 @@ import "./App.css";
 import Render from "./components/Render";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import MyArt from "./components/MyArt";
 
 function App() {
   const [activeItem, setActiveItem] = useState("");
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div className="App ">
-      <div className="flex flex-row">
+      <div className="flex flex-col">
         <Navbar onActiveItemChange={handleActiveItemChange} />
         <Home />
       </div>

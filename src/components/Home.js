@@ -1,9 +1,10 @@
 import React from "react";
 import presentation from "../images/maja.png";
+import MyArt from "./MyArt";
 
 function Home() {
   return (
-    <div className="flex flex-col text-xl text-white bg-forest-bg bg-cover  w-screen h-screen items-center  ">
+    <div className="flex flex-col text-xl bg-forest-bg bg-cover text-white   w-screen h-screen items-center  ">
       <div className="  mt-20 w-2/3 rounded-md max-w-2xl  min-w-[600px]">
         <div className="bg-sage-100 bg-opacity-40 backdrop-blur-lg  flex rounded-md shadow-lg">
           <div className="flex-1 flex justify-center items-center flex-col relative">
@@ -39,6 +40,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <MyArt />
     </div>
   );
 }
