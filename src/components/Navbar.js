@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../images/winnicka.png";
+import "./Navbar.css";
 
 function Navbar({ onActiveItemChange }) {
   const [activeItem, setActiveItem] = useState("");
@@ -8,29 +9,29 @@ function Navbar({ onActiveItemChange }) {
     setActiveItem(itemName);
     onActiveItemChange(itemName);
   };
+
   return (
-    <div className="fixed  w-screen p-5 pt-0 text-sage-600 font-fira   text-lg z-50">
-      <ul className="flex  flex-row  items-center justify-center gap-10">
-        <li className="py-2 opacity-75">
+    <div className="navbar-container">
+      <div className="navbar-title">
+        <h1>Maja Winnicka</h1>
+      </div>
+      <ul className="navbar-list">
+        <li className="navbar-item">
           <button onClick={() => handleItemClick("Home")}>
             <span>Home</span>
           </button>
         </li>
-        <li className="py-2 opacity-75">
+        <li className="navbar-item">
           <button onClick={() => handleItemClick("Workshop")}>
-            <span>Workshop</span>
+            <span>Portfolio</span>
           </button>
         </li>
-
-        <li>
-          <h1 className=" title text-black font-bold">Maja Winnicka</h1>
-        </li>
-        <li className="py-2 opacity-75">
+        <li className="navbar-item">
           <button onClick={() => handleItemClick("MyArt")}>
-            <span>My Art</span>
+            <span>Events</span>
           </button>
         </li>
-        <li className="py-2 opacity-75">
+        <li className="navbar-item">
           <button onClick={() => handleItemClick("About")}>
             <span>About</span>
           </button>

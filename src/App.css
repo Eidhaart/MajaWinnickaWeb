@@ -13,6 +13,34 @@
   }
 }
 
+.bg-forest-fixed::before {
+  /* Default styles for mobile and smaller screens */
+  content: "";
+  background: #cdd6cb;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  /* Fixed background for larger screens */
+  .bg-forest-fixed::before {
+    position: fixed;
+    background-attachment: fixed;
+    min-width: 768;
+    height: 100;
+  }
+}
+
+.content-app {
+  position: absolute;
+  position: absolute;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -44,6 +72,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom CSS classes to replace Tailwind classes */
+
+/* Custom CSS classes to replace Tailwind classes */
+
+/* Additional styles can be added or modified as needed */
+
+/* Add or modify styles as needed */
 
 @tailwind base;
 

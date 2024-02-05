@@ -1,24 +1,61 @@
 import React from "react";
 import raven from "../images/raven.jpg";
 import paints from "../images/paints.jpg";
+import "./MyArt.css"; // Import the new CSS file
+import ravens from "../images/ravens.png";
+import listen from "../images/listen.jpg";
+import leshen from "../images/leshen.jpg";
 
 function MyArt() {
   return (
-    <div className="my-8 bg-sage-100 bg-opacity-40 rounded-l-full backdrop-blur-lg p-2 flex w-4/6 max-w-2xl min-w-[600px]">
-      <div className="flex flex-row items-center">
-        {" "}
-        {/* Added items-center here */}
-        <img className="h-52 rounded-full p-2" src={paints} alt="Paints"></img>
-        <span className="font-fira leading-relaxed text-left text-sm py-3 px-7 text-black">
-          made with Daniel Smith watercolor paints, which are artist-quality
-          watercolors that use natural ingredients. Some of the colors are
-          derived from minerals and gemstones, such as lapis lazuli, amethyst,
-          and hematite. These paints have a rich texture and a vibrant hue that
-          capture the essence of nature. They also reflect light in different
-          ways, creating stunning effects on the paper. These paintings are
-          truly one-of-a-kind, and they will add a touch of nature into your
-          life.{" "}
-        </span>
+    <div>
+      <div className="my-art-container">
+        <h1> Popular Work </h1>
+        <div className="work-column">
+          <div className="work-card">
+            <img src={listen}></img>
+            <h2>Listening in</h2>
+            <span>
+              A state of calm, desired silence and solitude, allowing one to
+              regain balance and gather strength before diving again into the
+              omnipresent chaos.
+            </span>
+          </div>
+          <div className="work-card">
+            <img src={ravens}></img>
+            <h2>Ravens</h2>
+            <span>
+              The ravens symbolize the connection between the natural and the
+              spiritual realms, as well as the wisdom and mystery of nature. The
+              roots form an unseen world in nature and represent my
+              introversion.
+            </span>
+          </div>
+          <div className="work-card">
+            <img src={leshen}></img>
+            <h2>Leshen</h2>
+            <span>
+              His body, a mysterious intertwining of bark and foliage, rises
+              from the ground, one with nature and its immortal cycles. Leshen's
+              eyes, glowing like emeralds, reflect infinite wisdom and a deep
+              understanding of nature's mystical paths.
+            </span>
+          </div>
+          <div className="work-card-additional">
+            <img src={leshen}></img>
+            <h2>Leshen</h2>
+            <span>
+              His body, a mysterious intertwining of bark and foliage, rises
+              from the ground, one with nature and its immortal cycles. Leshen's
+              eyes, glowing like emeralds, reflect infinite wisdom and a deep
+              understanding of nature's mystical paths.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="social-box">
+        <span>You can see more of my paintings in my Etsy shop</span>
+        <button>Etsy</button>
       </div>
     </div>
   );

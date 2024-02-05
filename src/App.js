@@ -14,10 +14,15 @@ function App() {
   };
 
   return (
-    <div className="App ">
-      <div className="flex flex-col">
-        <Navbar onActiveItemChange={handleActiveItemChange} />
+    <div className=" flex flex-col text-xl text-white w-screen h-screen items-center App">
+      <div className=" content-app">
+        <Navbar
+          onActiveItemChange={handleActiveItemChange}
+          className="fixed "
+        />
         <Home />
+        <MyArt />
+        <div className="bg-forest-fixed"></div>
       </div>
     </div>
   );

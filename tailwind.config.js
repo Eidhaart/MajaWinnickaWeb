@@ -24,7 +24,8 @@ module.exports = {
         glow: "0 0 15px 5px rgba(66, 153, 225, 0.5)", // Custom glow effect
       },
       backgroundImage: {
-        "forest-bg": "url('./images/forest.png')", // Add this line
+        "forest-bg": "url('./images/forest.png')",
+        paints: "url('./images/paints.jpg')", // Add this line
       },
     },
   },
