@@ -4,6 +4,7 @@ import Render from "./components/Render";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import MyArt from "./components/MyArt";
+import Events from "./components/Events";
 
 function App() {
   const [activeItem, setActiveItem] = useState("");
@@ -22,6 +23,7 @@ function App() {
         />
         <Home />
         <MyArt />
+        <Events />
         <div className="bg-forest-fixed"></div>
       </div>
     </div>

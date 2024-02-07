@@ -1,0 +1,73 @@
+.events-component {
+  background-image: url("../images/forest.png");
+  border-radius: 5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  /* Removed align-items: center; to allow child elements to span full width */
+}
+.event-title {
+  font-family: "Philosopher" !important;
+  font-size: 2rem;
+  color: #fffff0;
+  font-weight: bold;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.event-entry {
+  border-radius: 5px;
+  width: 95%; /* Or 100% if you want it to span the full width */
+  margin: 10px auto; /* Maintains the centered alignment with auto margins */
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+.date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0; /* Example background */
+  margin-right: 20px;
+}
+
+.day,
+.month {
+  font-weight: bold;
+  color: #16161d;
+}
+
+.event-details {
+  text-align: left;
+}
+
+.event-name {
+  margin: 0;
+  padding: 0;
+}
+
+.event-info,
+.event-location {
+  display: flex;
+  align-items: center;
+}
+
+.event-info ion-icon,
+.event-location ion-icon {
+  margin-right: 5px;
+}
+
+/* Adjust icon size if necessary */
+ion-icon {
+  font-size: 20px; /* Example size */
+}
+
+.date-box {
+}
