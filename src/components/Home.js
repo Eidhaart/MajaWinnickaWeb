@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import presentation from "../images/maja.png";
 import MyArt from "./MyArt";
 import "./Home.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import ContactModal from "./ContactModal";
 
 function Home({ id }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+
   return (
     <div id={id} className="home-container">
       <div className="columns">
@@ -21,7 +26,9 @@ function Home({ id }) {
             of neurodivergent individuals.
           </span>
           <div className="button-group">
-            <button className="contact-button">Get in touch</button>
+            <button onClick={toggleModal} className="contact-button">
+              Get in touch
+            </button>
 
             <a
               className="social-button"
@@ -51,6 +58,7 @@ function Home({ id }) {
           />
         </div>
       </div>
+      <ContactModal isOpen={isModalOpen} onClose={toggleModal} />
     </div>
   );
 }

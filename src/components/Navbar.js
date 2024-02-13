@@ -22,6 +22,7 @@ function Navbar({ onActiveItemChange }) {
         element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
       window.scrollTo({ top: y, behavior: "smooth" });
+      setModalOpen(false);
     }
   }
 

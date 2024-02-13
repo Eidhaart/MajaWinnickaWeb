@@ -5,6 +5,7 @@ import "./MyArt.css"; // Import the new CSS file
 import ravens from "../images/ravens.png";
 import listen from "../images/listen.jpg";
 import leshen from "../images/leshen.jpg";
+import heart from "../images/heart.jpg";
 import { FaEtsy } from "react-icons/fa";
 
 function MyArt({ id }) {
@@ -32,17 +33,16 @@ function MyArt({ id }) {
               introversion.
             </span>
           </div>
-          <div className="work-card">
-            <img src={leshen}></img>
-            <h2>Leshen</h2>
+
+          <div className="work-card-additional">
+            <img src={heart}></img>
+            <h2>Heart of the forest</h2>
             <span>
-              His body, a mysterious intertwining of bark and foliage, rises
-              from the ground, one with nature and its immortal cycles. Leshen's
-              eyes, glowing like emeralds, reflect infinite wisdom and a deep
-              understanding of nature's mystical paths.
+              Focusing on maintaining a state of balance and avoiding sensory
+              overstimulation, wading waist-deep in a swamp of stimuli.
             </span>
           </div>
-          <div className="work-card-additional">
+          <div className="work-card">
             <img src={leshen}></img>
             <h2>Leshen</h2>
             <span>

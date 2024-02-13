@@ -34,7 +34,7 @@
 
 .footer-design-credit {
   position: absolute; /* Position it relative to the footer container */
-  right: 20px; /* Distance from the right edge */
+  right: 50px; /* Distance from the right edge */
   bottom: 10px; /* Distance from the bottom edge */
   font-size: 12px; /* Smaller font size for the design credit */
   color: #ffffff; /* Matching the footer text color */

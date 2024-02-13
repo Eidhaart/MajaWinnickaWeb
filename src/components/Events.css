@@ -1,111 +1,76 @@
 .events-component {
-  background-image: url("../images/forest.jpg");
-  border-radius: 5px;
-  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black for depth */
+  background-size: cover;
+  border: 1px solid #585c58;
+  border-radius: 5px; /* Rounded corners for a softer look */
+  margin: 5px auto; /* Center the component with some margin */
   display: flex;
   flex-direction: column;
-  color: #fffff0;
-  /* Removed align-items: center; to allow child elements to span full width */
+  align-items: center; /* This ensures all children are centered along the cross-axis */
+  justify-content: start;
+
+  flex-direction: column;
+  color: #e0e0e0; /* Light text color for contrast */
+  padding: 20px; /* Adequate padding for content */
+  max-width: 100%; /* Max width for better readability on larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
+  backdrop-filter: blur(10px); /* Blur effect for background content */
 }
+
+.upcoming,
+.past {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
 .event-title {
-  font-family: "Philosopher" !important;
+  font-family: "Philosopher", sans-serif;
   font-size: 2rem;
   color: #fffff0;
   font-weight: bold;
-  padding: 0.75rem;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  line-height: 1;
-  margin-top: 20px;
-}
-
-.event-name {
-  margin: 0 0 10px 0 !important; /* Zero margin on top, right, and a bit of margin at the bottom for spacing */
-  padding: 0; /* Resets any padding */
-  font-family: "Philosopher", sans-serif; /* Ensures the font family applies */
-  font-size: 1.5rem; /* Adjusts font size for visibility */
-  font-weight: bold; /* Makes it stand out */
-  color: #fffff0; /* Maintains the color */
-  align-self: flex-start; /* Aligns to the start of the flex container */
+  text-align: center; /* Center-align the title */
+  margin: 0 0 20px 0; /* Adjust margin to reduce space */
 }
 
 .event-entry {
-  border-radius: 5px;
-  height: 140px;
-  width: 95%; /* Or 100% if you want it to span the full width */
-  margin: 10px auto; /* Maintains the centered alignment with auto margins */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+  border-radius: 8px;
+  margin: 10px 0;
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-  background-color: #f1efec54;
-  transition: all 0.1s ease-in-out;
+  padding: 15px; /* Increased padding for better spacing */
+  transition: transform 0.2s ease-in-out, background-color 0.3s; /* Smooth transitions */
 }
+
 .event-entry:hover {
-  border-radius: 5px;
-  width: 95%; /* Or 100% if you want it to span the full width */
-  margin: 10px auto; /* Maintains the centered alignment with auto margins */
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-  background-color: #3636359a;
-  transition: all 0.1s ease-in-out;
+  transform: translateY(-5px); /* Lift effect on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Highlight entry on hover */
 }
 
 .date-box {
-  width: 120px;
-  height: 120px;
+  width: 120px; /* Or 80px on smaller screens */
+  height: 120px; /* Matching width for a square aspect ratio */
+  border-radius: 50%; /* Circular shape */
+  background-size: cover;
+  background-position: center;
+  margin-right: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  background-size: cover; /* Ensure the background covers the area, might adjust per box for best visual */
-  background-position: center; /* Center the background image */
-  margin-right: 20px;
-  border-radius: 5px;
-  font-family: "Philosopher";
-  /* Applying a consistent box-shadow or border can also enhance the uniform look */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional */
+  font-family: "Philosopher", sans-serif;
+  color: #fff; /* Assuming white text color */
+  /* Add box-shadow if needed for better visibility */
 }
 
-/* Ensuring consistent size across device widths */
-@media only screen and (max-width: 600px) {
-  .date-box {
-    width: 100px; /* Slightly reduce size on smaller screens if necessary */
-    height: 100px;
-    margin-right: 10px; /* Adjust margin for smaller screens */
-    background-size: 120%; /* Adjust if you're changing the size of the box */
-  }
-
-  .event-name {
-    font-size: 1rem !important;
-    font-family: "sarif";
-  }
-}
-
-/* Specific date-box classes for different images */
-.date-box.aniv,
-.date-box.dublin,
-.date-box.first,
-.date-box.upcoming,
-.date-box.upcoming.alt {
-  background-size: 100%;
-  margin-right: 20px;
-}
-
+/* Example for one specific class, repeat for others with correct image paths */
 .date-box.aniv {
   background-image: url("../images/cc2023.jpg");
 }
 .date-box.dublin {
   background-image: url("../images/wc2019.png");
-}
-.date-box.first {
-  background-image: url("../images/cc2018.jpg");
 }
 .date-box.upcoming {
   background-image: url("../images/cafe.jpg");
@@ -113,165 +78,49 @@
 .date-box.upcoming.alt {
   background-image: url("../images/cc2024.jpg");
 }
-
-.day,
-.month {
-  font-weight: bold;
-  color: #16161d;
+.date-box.first {
+  background-image: url("../images/cc2018.jpg");
 }
 
+/* Repeat for .dublin, .first, .upcoming, .upcoming.alt with respective images */
+
 .event-details {
-  text-align: left;
-  justify-content: space-between;
-  gap: 25px;
+  flex: 1; /* Allow event details to fill available space */
+  display: flex;
+  flex-direction: column;
+}
+
+.event-name {
+  font-size: 1.25rem; /* Larger font size for event name */
+  color: #ffffff; /* Ensure visibility */
+  margin-bottom: 5px; /* Reduce margin for compact look */
 }
 
 .event-info,
 .event-location {
   display: flex;
   align-items: center;
+  font-size: 0.9rem; /* Smaller font size for info */
 }
 
-.event-info ion-icon,
-.event-location ion-icon {
-  margin-right: 5px;
-}
-
-.list-holder {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Adjust icon size if necessary */
 ion-icon {
-  font-size: 20px; /* Example size */
+  font-size: 1.2rem; /* Larger icons for better visibility */
+  margin-right: 8px; /* Space between icon and text */
+  color: #ab8f59; /* Soft green for icons */
 }
 
-.date-box {
-  border-radius: 5px;
-  font-family: "Philosopher";
-}
-
-.past h2,
-.upcoming h2 {
-  margin: 15px;
-  font-size: larger;
-  color: #fffff0;
-}
-
-.upcoming li {
-  width: 100%;
-}
-
-@media only screen and (min-width: 900px) {
-  .date-box.aniv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-image: url("../images/cc2023.jpg");
-    background-size: contain;
-    background-position: center;
-
-    margin-right: 20px;
-  }
-  .date-box.dublin {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-image: url("../images/wc2019.png");
-    background-size: contain;
-    margin-right: 20px;
-    background-position: center;
-
-    margin-right: 20px;
-  }
-  .date-box.first {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-image: url("../images/cc2018.jpg");
-    background-size: contain;
-    margin-right: 20px;
-    background-position: center;
-
-    margin-right: 20px;
-  }
-  .date-box.upcoming {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-image: url("../images/cafe.jpg");
-    background-size: contain;
-    margin-right: 20px;
-    background-position: center;
-
-    margin-right: 20px;
-  }
-  .date-box.upcoming.alt {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-image: url("../images/cc2024.jpg");
-    background-size: contain;
-    margin-right: 20px;
-    background-position: center;
-
-    margin-right: 20px;
+/* Media Queries for Responsive Adjustments */
+@media only screen and (max-width: 900px) {
+  .events-component {
+    width: 100%; /* Slightly more width for smaller screens */
   }
 
-  .list-holder {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+  .date-box {
+    width: 80px; /* Smaller date boxes on smaller screens */
+    height: 80px;
   }
 
-  .upcoming li {
-    width: 40%;
-  }
-
-  .event-entry {
-    border-radius: 5px;
-    width: 95%; /* Or 100% if you want it to span the full width */
-    flex: 1 1 calc(33.333% - 20px); /* Adjusts the basis to fit 3 items per row, accounting for some margin */
-    margin: 10px; /* Maintains the centered alignment with auto margins */
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-    transition: all 0.1s ease-in-out;
-  }
-  .event-entry:hover {
-    border-radius: 5px;
-    width: 95%; /* Or 100% if you want it to span the full width */
-    flex: 1 1 calc(33.333% - 20px); /* Adjusts the basis to fit 3 items per row, accounting for some margin */
-    margin: 10px; /* Maintains the centered alignment with auto margins */
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #3636359a;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-    transform: scale(1.01);
-    transition: all 0.1s ease-in-out;
+  .event-name {
+    font-size: 1rem; /* Adjust font size for smaller screens */
   }
 }

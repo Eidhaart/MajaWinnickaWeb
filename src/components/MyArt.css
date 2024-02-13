@@ -1,6 +1,5 @@
 .my-art-container {
-  background-color: #f0fff0;
-  background-image: url("../images/forest.png");
+  background: rgba(0, 0, 0, 0.37);
   max-width: 100vw;
   z-index: 10;
   border-radius: 5px;
@@ -9,6 +8,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 35px;
+  backdrop-filter: blur(8px);
+  border: 1px solid #585c58;
 }
 
 .my-art-container h1 {
@@ -90,12 +91,20 @@
 .social-box {
   border-radius: 5px;
   margin-top: 5px;
-  padding: 20px;
-  background-image: url("../images/forest.png");
+  padding: 50px !important;
+
+  background: rgba(
+    0,
+    0,
+    0,
+    0.37
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #585c58;
 }
 .social-box span {
   font-family: "Fira Sans";

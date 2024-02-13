@@ -91,7 +91,7 @@ function Events({ id }) {
                     <h2 class="event-name">Artist Alley at Comiccon</h2>
                     <div class="event-info">
                       <ion-icon name="calendar-clear-outline"></ion-icon>
-                      <span class="date-span">14/9-16/9</span>
+                      <span class="date-span">14/9-16/9 2018</span>
                     </div>
                     <div class="event-location">
                       <ion-icon name="location-outline"></ion-icon>

@@ -1,0 +1,96 @@
+/* ContactModal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  background-color: #49574c; /* Updated modal background color */
+  color: #fffff0; /* Updated text color */
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  color: #fffff0; /* Ensure close button matches the modal text color */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-title {
+  font-family: "Philosopher";
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #ffffff; /* Ensure input fields are visibly distinct */
+  color: #2a2e2b; /* Input text color for contrast */
+}
+
+.submit-btn {
+  background-color: #ab8f59;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 40px;
+}
+
+.submit-btn:hover {
+  background-color: #9dbf9e;
+  color: #16161d;
+}
+
+.thank-you-message {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.thank-you-message h2 {
+  font-family: "Philosopher", sans-serif;
+  font-size: 2rem; /* Larger font size for thank you message */
+  color: #fffff0;
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+.contact-form h2 {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1rem; /* Smaller font size for 'Contact Us' */
+  color: #fffff0;
+  margin-bottom: 20px;
+}

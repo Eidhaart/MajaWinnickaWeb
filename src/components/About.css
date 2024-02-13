@@ -2,52 +2,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-image: url("../images/forest.jpg"); /* Dark theme */
+  background: rgba(0, 0, 0, 0.37);
   color: #ffffff;
   padding: 30px;
   border-radius: 5px;
   margin-top: 5px;
+  backdrop-filter: blur(8px);
+  border: 1px solid #585c58;
 }
 
 .about-title {
-  color: #e0e0e0;
-  margin-bottom: 30px;
   font-family: "Philosopher";
   font-size: 2rem;
-  margin: 10px;
-  margin-bottom: 30px !important;
+  color: #e0e0e0;
+  margin: 10px 0 30px;
 }
 
 .about-content {
   max-width: 1500px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-section {
   display: flex;
-  flex-direction: column; /* Start with column direction for mobile */
-  align-items: center; /* Center items for mobile */
+  flex-direction: column;
+  align-items: center;
   text-align: left;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .about-image {
-  width: 300px; /* Fixed width for square images */
-  height: 300px; /* Fixed height to match width */
-  object-fit: cover; /* Cover to maintain aspect without distortion */
-  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100%;
   margin: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
-  font-size: calc(0.75em + 0.5vw); /* Responsively smaller font size */
+  font-size: calc(0.65em + 0.7vw); /* Smaller font size */
   color: #f5f5f5;
   max-width: 600px;
   margin: 0 20px;
   padding: 20px;
-  line-height: 1.5; /* Adjusted for better readability */
+  line-height: 1.5;
   background-color: #00000050;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -55,35 +58,33 @@
 }
 
 /* Media query for larger screens */
-@media (max-width: 1200px) {
-  .about-image {
-    width: 400px; /* Fixed width for square images */
-    height: 400px; /* Fixed height to match width */
-    object-fit: cover; /* Cover to maintain aspect without distortion */
-    border-radius: 10px;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-}
-/* Media query for larger screens */
 @media (min-width: 1200px) {
-  .about-section {
-    flex-direction: row; /* Row direction for non-reversed sections */
-    justify-content: space-around;
-    align-items: center;
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a two-column layout */
+    gap: 20px; /* Spacing between columns */
   }
 
-  .about-image {
-    width: 400px; /* Fixed width for square images */
-    height: 400px; /* Fixed height to match width */
-    object-fit: cover; /* Cover to maintain aspect without distortion */
-    border-radius: 10px;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 100%;
+  .about-section {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center; /* Align items at the start of the container */
+    width: auto; /* Override width to fit grid layout */
   }
 
   .about-section--reverse {
-    flex-direction: row-reverse; /* Apply row-reverse for alternating sections */
+    flex-direction: row;
+  }
+
+  .about-image {
+    width: 250px; /* Adjust image size for larger screens */
+    height: 250px;
+    border-radius: 100%;
+  }
+
+  .about-text {
+    font-size: 1rem; /* Further reduce font size for larger screens */
+    padding: 15px; /* Adjust padding */
+    max-width: 100%; /* Allow text to fill the available space */
   }
 }
