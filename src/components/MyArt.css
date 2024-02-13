@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 35px;
 }
 
 .my-art-container h1 {
@@ -100,15 +101,18 @@
   font-family: "Fira Sans";
   font-size: 1rem;
   margin-bottom: 20px;
+  color: #f0fff0;
+  font-size: 1.2rem;
 }
 
-.social-box button {
+.social-box a {
   background-color: #ab8f59;
   width: 20%;
   border-radius: 0.5rem;
   color: white;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +120,7 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-.social-box button:hover {
+.social-box a:hover {
   background-color: #9dbf9e;
   color: #16161d;
   transform: translateY(-2px);

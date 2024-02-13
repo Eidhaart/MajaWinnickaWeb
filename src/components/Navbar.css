@@ -1,18 +1,102 @@
 .navbar-container {
   position: fixed;
   display: flex;
-
   flex-direction: row;
+  justify-content: space-between; /* Pushes children to either end */
+  align-items: center; /* This centers children vertically */
   top: 0;
   width: 100vw;
   padding: 0.5rem;
   font-family: "Fira Sans", sans-serif;
-  font-size: 0.875rem; /* equivalent to Tailwind's text-sm */
+  font-size: 0.875rem; /* Tailwind's text-sm */
   z-index: 50;
-  background-color: #6074598e;
-  /* rgba for bg-sage-200 with opacity-50 */
-  backdrop-filter: blur(20px); /* equivalent to backdrop-blur-lg */
+  background: #485843 url("../images/squirrel2.png") no-repeat center center;
+  background-size: cover; /* rgba for bg-sage-200 with opacity-50 */
+  backdrop-filter: blur(20px); /* Tailwind's backdrop-blur-lg */
   height: 65px;
+}
+
+.modal-container.active {
+  position: fixed;
+  color: #16161d;
+  top: 65px; /* Height of the navbar to ensure modal sits right under it */
+  width: 100vw;
+  /* Match the width of the navbar for alignment */
+  background-color: #9cb395f1; /* Or any color that fits your design */
+  z-index: 49; /* Optional: Ensure it's below the navbar if they overlap */
+  /* Additional styling here to ensure visibility and aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  /* Initially hidden, can be shown based on a class toggle or JavaScript */
+  transform: translateY(0px);
+  transition: all 0.5s ease;
+  opacity: 1;
+  background-blend-mode: multiply;
+  text-align: right;
+  padding: 20px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.modal-container.active li {
+  display: flex;
+  /* Aligns items vertically in the center */
+  gap: 8px; /* Adjusts space between icon and text */
+  padding: 5px;
+  border-bottom: #16161d5b solid 1.5px;
+}
+.modal-container li {
+  display: flex;
+  /* Aligns items vertically in the center */
+  gap: 8px; /* Adjusts space between icon and text */
+  padding: 5px;
+  border-bottom: #16161d5b solid 1.5px;
+}
+
+.modal-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Optional: You may want to adjust the size or color of the icons */
+.modal-container.active li svg {
+  /* Example: Adjust the icon size and color */
+  width: 20px; /* Adjust based on your preference */
+  height: 20px; /* Adjust based on your preference */
+  color: #16161d; /* Adjust the icon color as needed */
+}
+
+.modal-container.active li:hover {
+  background-color: #d8fcda31;
+  border-radius: 5px;
+}
+.modal-container {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  position: fixed;
+  color: #16161d;
+  top: 65px; /* Height of the navbar to ensure modal sits right under it */
+  width: 100vw;
+  /* Match the width of the navbar for alignment */
+  background-color: #9cb395f1; /* Or any color that fits your design */
+  z-index: 49; /* Optional: Ensure it's below the navbar if they overlap */
+  /* Additional styling here to ensure visibility and aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  /* Initially hidden, can be shown based on a class toggle or JavaScript */
+  transform: translateY(-200px);
+  transition: all 0.5s ease;
+  opacity: 1;
+  background-blend-mode: multiply;
+  text-align: right;
+  padding: 20px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar-container h1 {
@@ -20,24 +104,68 @@
 }
 
 .navbar-list {
-  display: flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem; /* equivalent to space-x-6 */
+  display: none;
 }
 
 .navbar-item {
-  color: #16161d;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  opacity: 0.75;
+  color: #f8f3e9;
+  padding-top: 0.5rem; /* This will be overridden by padding: 5px; */
+  padding-bottom: 0.5rem; /* This will be overridden by padding: 5px; */
+  opacity: 1;
+  border-radius: 5px;
+  font-size: large;
+  border-bottom: none; /* This has no effect because border-bottom is already none by default */
+  transition: all 0.2s;
+  padding: 5px; /* This overrides the padding-top and padding-bottom */
+  text-decoration: none;
+}
+
+.navbar-item:hover {
+  text-decoration: underline solid #f8f3e9;
 }
 
 .navbar-title {
   margin-right: 30px;
   align-self: center;
   font-size: 1.2rem; /* equivalent to text-md */
-  color: #16161d;
+  color: #f8f3e9;
   font-weight: bold;
+  margin-left: 10px;
+}
+
+.hamburger-icon {
+  display: flex; /* Ensures flexbox alignment properties work */
+  align-items: center; /* Center the button vertically */
+  justify-content: center; /* Center the button horizontally */
+  margin-left: auto; /* Pushes to the right */
+  margin-right: 2px; /* Ensures some spacing from the right edge */
+
+  background-color: #485843;
+
+  border-radius: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-container {
+    background: #4a4e40 url("../images/squirrel3.png") no-repeat;
+    background-position: 30% center;
+    background-size: cover;
+    height: 110px;
+  }
+  .navbar-list {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; /* equivalent to space-x-6 */
+    margin-left: auto; /* Pushes the navbar-list to the right */
+    margin-right: 10%;
+  }
+  .hamburger-icon {
+    display: none; /* Hide the hamburger icon on larger screens */
+  }
+
+  .navbar-title {
+    font-size: 2rem;
+  }
 }

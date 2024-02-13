@@ -2,10 +2,12 @@ import React from "react";
 import presentation from "../images/maja.png";
 import MyArt from "./MyArt";
 import "./Home.css";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
-function Home() {
+function Home({ id }) {
   return (
-    <div className="home-container">
+    <div id={id} className="home-container">
       <div className="columns">
         <div className="center-column">
           <h1 className="main-title">Back to the Roots</h1>
@@ -20,12 +22,24 @@ function Home() {
           </span>
           <div className="button-group">
             <button className="contact-button">Get in touch</button>
-            <button className="social-button">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </button>
-            <button className="social-button">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </button>
+
+            <a
+              className="social-button"
+              href="https://www.instagram.com/winnickamaja/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              className="social-button"
+              href="https://www.facebook.com/Majawinnick"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook />
+            </a>
           </div>
         </div>
 

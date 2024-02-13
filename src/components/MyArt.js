@@ -5,10 +5,11 @@ import "./MyArt.css"; // Import the new CSS file
 import ravens from "../images/ravens.png";
 import listen from "../images/listen.jpg";
 import leshen from "../images/leshen.jpg";
+import { FaEtsy } from "react-icons/fa";
 
-function MyArt() {
+function MyArt({ id }) {
   return (
-    <div>
+    <div id={id}>
       <div className="my-art-container">
         <h1> Popular Work </h1>
         <div className="work-column">
@@ -55,7 +56,13 @@ function MyArt() {
       </div>
       <div className="social-box">
         <span>You can see more of my paintings in my Etsy shop</span>
-        <button>Etsy</button>
+        <a
+          href="https://inmyforestshop.etsy.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaEtsy />
+        </a>
       </div>
     </div>
   );
