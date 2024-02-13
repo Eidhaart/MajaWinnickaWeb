@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/MajaWinnickaWeb/static/css/main.28cfb875.css",
-    "main.js": "/MajaWinnickaWeb/static/js/main.fa18e8ad.js",
+    "main.css": "/MajaWinnickaWeb/static/css/main.4eb0de28.css",
+    "main.js": "/MajaWinnickaWeb/static/js/main.4e6db743.js",
     "static/js/787.c74f3284.chunk.js": "/MajaWinnickaWeb/static/js/787.c74f3284.chunk.js",
     "static/media/ravens.png": "/MajaWinnickaWeb/static/media/ravens.d093c34cfbaeb1ab2973.png",
     "static/media/listen.jpg": "/MajaWinnickaWeb/static/media/listen.80dfde16239074cebcd0.jpg",
-    "static/media/lady.jpg": "/MajaWinnickaWeb/static/media/lady.d2dd3e50885cb497b109.jpg",
+    "static/media/heart.jpg": "/MajaWinnickaWeb/static/media/heart.78a06ad99ea707360cb4.jpg",
     "static/media/squirrel3.png": "/MajaWinnickaWeb/static/media/squirrel3.b08d6554ab0878a0570a.png",
     "static/media/squirrel2.png": "/MajaWinnickaWeb/static/media/squirrel2.cfd1610a7dd400ef768e.png",
+    "static/media/lady.jpg": "/MajaWinnickaWeb/static/media/lady.94696b3d77000dc148d5.jpg",
+    "static/media/forestnew1.jpg": "/MajaWinnickaWeb/static/media/forestnew1.b7c151a481b9f62447f4.jpg",
     "static/media/maja.png": "/MajaWinnickaWeb/static/media/maja.5425f88cffde94109c82.png",
-    "static/media/forest.jpg": "/MajaWinnickaWeb/static/media/forest.f2fa3653a6ce17ca7bfc.jpg",
+    "static/media/forestnew.jpg": "/MajaWinnickaWeb/static/media/forestnew.6119af5cd334735d1f92.jpg",
     "static/media/raven.jpg": "/MajaWinnickaWeb/static/media/raven.84765fab4a6affae21a9.jpg",
-    "static/media/forest.png": "/MajaWinnickaWeb/static/media/forest.68b7344b7250996f1f5c.png",
     "static/media/paints.jpg": "/MajaWinnickaWeb/static/media/paints.ba46eed159c3e439ee67.jpg",
     "static/media/winnicka.png": "/MajaWinnickaWeb/static/media/winnicka.ceb764857baf524181c7.png",
     "static/media/leshen.jpg": "/MajaWinnickaWeb/static/media/leshen.9043e7b7d78059d62f07.jpg",
@@ -23,12 +24,12 @@
     "static/media/wc2019.png": "/MajaWinnickaWeb/static/media/wc2019.b6fab5618b99f9147b80.png",
     "static/media/cc2018.jpg": "/MajaWinnickaWeb/static/media/cc2018.05499e97b8e013bfd843.jpg",
     "index.html": "/MajaWinnickaWeb/index.html",
-    "main.28cfb875.css.map": "/MajaWinnickaWeb/static/css/main.28cfb875.css.map",
-    "main.fa18e8ad.js.map": "/MajaWinnickaWeb/static/js/main.fa18e8ad.js.map",
+    "main.4eb0de28.css.map": "/MajaWinnickaWeb/static/css/main.4eb0de28.css.map",
+    "main.4e6db743.js.map": "/MajaWinnickaWeb/static/js/main.4e6db743.js.map",
     "787.c74f3284.chunk.js.map": "/MajaWinnickaWeb/static/js/787.c74f3284.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28cfb875.css",
-    "static/js/main.fa18e8ad.js"
+    "static/css/main.4eb0de28.css",
+    "static/js/main.4e6db743.js"
   ]
 }
