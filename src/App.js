@@ -30,6 +30,7 @@ function App() {
         <MyArt id="myArt" />
         <Events id="events" />
         <About id="about" />
+        <Footer />
       </div>
     </div>
   );
