@@ -1,29 +1,30 @@
 .events-component {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black for depth */
-  background-size: cover;
-  border: 1px solid #585c58;
-  border-radius: 5px; /* Rounded corners for a softer look */
-  margin: 5px auto; /* Center the component with some margin */
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin: 5px auto;
   display: flex;
   flex-direction: column;
-  align-items: center; /* This ensures all children are centered along the cross-axis */
+  align-items: center;
   justify-content: start;
+  color: #e0e0e0;
+  padding: 20px;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
 
-  flex-direction: column;
-  color: #e0e0e0; /* Light text color for contrast */
-  padding: 20px; /* Adequate padding for content */
-  max-width: 100%; /* Max width for better readability on larger screens */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
-  backdrop-filter: blur(10px); /* Blur effect for background content */
+.events-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px; /* Adjust based on your preference */
 }
 
 .upcoming,
 .past {
-  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self: center;
+  width: 48%; /* Adjust the width as necessary for spacing */
 }
 
 .event-title {
@@ -31,10 +32,10 @@
   font-size: 2rem;
   color: #fffff0;
   font-weight: bold;
-  text-align: center; /* Center-align the title */
-  margin: 0 0 20px 0; /* Adjust margin to reduce space */
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%; /* Ensure the title spans the full width */
 }
-
 .event-entry {
   background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background */
   border-radius: 8px;
@@ -63,6 +64,24 @@
   font-family: "Philosopher", sans-serif;
   color: #fff; /* Assuming white text color */
   /* Add box-shadow if needed for better visibility */
+}
+
+.upcoming .date-box,
+.past .date-box {
+  /* Common styles for date boxes in both lists */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure any specific image-related styles are applied to both sections */
+.upcoming img,
+.past img {
+  object-fit: cover;
 }
 
 /* Example for one specific class, repeat for others with correct image paths */
@@ -110,17 +129,14 @@ ion-icon {
 }
 
 /* Media Queries for Responsive Adjustments */
-@media only screen and (max-width: 900px) {
-  .events-component {
-    width: 100%; /* Slightly more width for smaller screens */
+@media (max-width: 900px) {
+  .events-container {
+    flex-direction: column; /* Stack the columns vertically */
+    align-items: center; /* Center-align the child elements */
   }
 
-  .date-box {
-    width: 80px; /* Smaller date boxes on smaller screens */
-    height: 80px;
-  }
-
-  .event-name {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+  .upcoming,
+  .past {
+    width: 100%; /* Each section takes the full width */
   }
 }
