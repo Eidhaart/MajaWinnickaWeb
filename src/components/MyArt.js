@@ -6,6 +6,7 @@ import ravens from "../images/ravens.png";
 import listen from "../images/listen.jpg";
 import leshen from "../images/leshen.jpg";
 import heart from "../images/heart.jpg";
+import deer from "../images/deer.jpg";
 import { FaEtsy } from "react-icons/fa";
 
 function MyArt({ id }) {
@@ -35,11 +36,13 @@ function MyArt({ id }) {
           </div>
 
           <div className="work-card-additional">
-            <img src={heart}></img>
-            <h2>Heart of the forest</h2>
+            <img src={deer}></img>
+            <h2>Guardian of the forest</h2>
             <span>
-              Focusing on maintaining a state of balance and avoiding sensory
-              overstimulation, wading waist-deep in a swamp of stimuli.
+              The proud stag is a personal motif, relating to the inner sense of
+              one's own dignity and inner strength, which allows one to endure
+              and bear life's turmoil with grace, rise after every fall, and
+              remain steadfast in one's values/ideals.
             </span>
           </div>
           <div className="work-card">
